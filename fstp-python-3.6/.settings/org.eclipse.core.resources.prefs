@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/core/PService/PyService.py=utf-8
+encoding//src/core/kafka/kafkaCustomer.py=utf-8
+encoding//src/core/kafka/kafkaProducer.py=utf-8
+encoding//src/core/log/PyPLogger.py=utf-8
+encoding//src/core/md/MdData.py=UTF-8
+encoding//src/strategy/StrategyContainer.py=utf-8

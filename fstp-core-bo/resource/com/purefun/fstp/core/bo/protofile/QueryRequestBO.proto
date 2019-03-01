@@ -1,0 +1,14 @@
+import "google/protobuf/any.proto";
+
+option java_outer_classname = "QueryRequestBO_PRO";
+option java_package = "com.purefun.fstp.core.bo.pro";
+
+message QueryRequestBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string requestServiceName = 4;
+    optional string respondServiceName = 5;
+    optional string querytopic = 6;
+    optional string tempTopic = 7;
+}

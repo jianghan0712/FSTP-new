@@ -1,0 +1,12 @@
+import "google/protobuf/any.proto";
+
+option java_outer_classname = "QNSRequestBO_PRO";
+option java_package = "com.purefun.fstp.core.bo.pro";
+
+message QNSRequestBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string servername = 4;
+    optional string request = 5;
+}

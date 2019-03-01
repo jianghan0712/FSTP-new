@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<import resource="classpath*:comConf/CommonConfig.xml" />
+    <context:component-scan base-package="com.purefun.fstp.core.service.monitor" use-default-filters="true"/>
+    
+    <bean id="MainServerConfiguration" class="com.purefun.fstp.core.configuration.FstpConfiguration">  
+		<property name="serviceName" value="MonitorService"/>
+		<property name="isServer" value="true"/>
+    	<property name="cacheType" value="Ignite"/>
+    	<property name="MQType" value="Qpid"/>	
+    	<property name="kafkaFlag" value="true"/><!-- 是否启用kafka：WebProxy必须起，其他java服务不必须 -->	
+    	<property name="managerBOMap">
+    		<map>
+    			<entry key="com.purefun.fstp.core.bo.TestBO"    		value="fstp.core.rpc.testone"/>
+    		</map>
+    	</property> 
+    </bean>
+         
+    <bean id="MainServer" class="com.purefun.fstp.core.service.monitor.MonitorService">  
+        <constructor-arg name="config" type="com.purefun.fstp.core.configuration.FstpConfiguration" ref="MainServerConfiguration"></constructor-arg>  
+   	</bean>
+   	
+   	<bean id="cacheConfigurationList" class="java.util.ArrayList">
+  		<constructor-arg>
+	  		<list>
+                <bean class="org.apache.ignite.configuration.CacheConfiguration">
+                    <property name="name" value="redis-ignite-internal-cache-0"/>
+                    <property name="atomicityMode" value="ATOMIC"/>
+                    <property name="cacheMode" value="LOCAL"/>
+                </bean>
+	  		</list>
+	  	</constructor-arg>
+  	</bean>	 	
+   	  	
+</beans>

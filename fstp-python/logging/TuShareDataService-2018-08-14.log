@@ -1,0 +1,12 @@
+[INFO] [2018-08-14 18:28:26.063][TuShareDataService] - create qpid session succesful
+[INFO] [2018-08-14 18:28:26.131][TuShareDataService] - initService successful
+[ERROR] [2018-08-14 18:28:26.133][TuShareDataService] - config module mongodb is not exist!
+[INFO] [2018-08-14 18:28:26.134][TuShareDataService] - startService successful
+[INFO] [2018-08-14 18:29:17.050][TuShareDataService] - create qpid session succesful
+[INFO] [2018-08-14 18:29:17.054][TuShareDataService] - initService successful
+[INFO] [2018-08-14 18:29:17.061][TuShareDataService] - startService successful
+[INFO] [2018-08-14 18:37:44.468][TuShareDataService] - create qpid session succesful
+[INFO] [2018-08-14 18:37:44.474][TuShareDataService] - initService successful
+[INFO] [2018-08-14 18:38:07.049][TuShareDataService] - create qpid session succesful
+[INFO] [2018-08-14 18:38:07.060][TuShareDataService] - initService successful
+[INFO] [2018-08-14 18:38:07.072][TuShareDataService] - startService successful

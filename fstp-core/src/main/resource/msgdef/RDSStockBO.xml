@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+   <bean id="BOinstance" class="com.purefun.fstp.core.bo.model.BOinstance">     
+       <property name="boid" value="1001"/>
+       <property name="name" value="RDSStockBO"/>
+       <property name="destination" value="fstp.ace.rds.server.stock"/>
+       <property name="boEntry" value="com.purefun.fstp.core.bo.RDSStockBO"/>
+       <property name="serverList">
+       		<list>
+       			 <value>RepoRDS</value>  
+       		</list>
+       </property>     
+   </bean>
+</beans>

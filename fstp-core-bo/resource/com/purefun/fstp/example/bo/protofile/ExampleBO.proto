@@ -1,0 +1,12 @@
+import "google/protobuf/any.proto";
+
+option java_outer_classname = "ExampleBO_PRO";
+option java_package = "com.purefun.fstp.example.bo.pro";
+
+message ExampleBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string name = 4;
+    optional int32 age = 5;
+}

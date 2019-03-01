@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">  
+  
+  	<bean id="ignitecfg" class="com.purefun.fstp.core.ignite.cfg.IgniteCfg">
+  		<property name="cfg" ref="igniteConfiguration"/>  		
+  	</bean>
+  	
+  	<bean id="igniteConfiguration" class="org.apache.ignite.configuration.IgniteConfiguration">
+  		<property name="peerClassLoadingEnabled" value="false"></property> 
+  		<!--  <property name="cacheConfiguration" ref="cacheConfigurationList"/> -->
+        <property name="discoverySpi">  
+            <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">  
+                <property name="joinTimeout" value="200"/>  <!-- 服务端不存就立刻退出-->  
+                <property name="ipFinder">  
+                    <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.multicast.TcpDiscoveryMulticastIpFinder">  
+                        <property name="addresses">  
+                            <list>  
+                                <value>127.0.0.1:47500</value>  
+                            </list>  
+                        </property>  
+                    </bean>  
+                </property>  
+            </bean>  
+        </property>  
+  	</bean> 
+  	
+  	<bean id="cacheConfigurationList" class="java.util.ArrayList">
+  		<constructor-arg>
+	  		<list>
+	  			<bean class="org.apache.ignite.configuration.CacheConfiguration">
+	  			 	<property name="name" value="default-cache"></property>   
+                </bean>
+	  		</list>
+	  	</constructor-arg>
+  	</bean>
+</beans>  

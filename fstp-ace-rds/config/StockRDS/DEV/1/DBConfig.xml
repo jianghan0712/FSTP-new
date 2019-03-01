@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd"
+       default-lazy-init="true">
+               
+    <context:component-scan base-package="com.purefun.fstp.core.bo"/>
+    
+    <!--  配置数据源 -->  
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/pilot?useSSL=false"/>
+        <property name="username" value="root"/>
+        <property name="password" value="jianghan"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    </bean>
+    
+    <!--  配置 JPA 的 EntityManagerFactory -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"></bean>
+		</property>
+		<property name="packagesToScan" value="com.purefun.fstp.core.bo"/>
+        <property name="persistenceXmlLocation" value="classpath:resource/META-INF/persistence.xml"/>
+        <property name="persistenceUnitName" value="rds-persistence"/>      
+    </bean>
+    
+    <!--  配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+  
+  	<!--  配置支持注解的事务 -->
+  	<tx:annotation-driven transaction-manager="transactionManager"/>
+  	 	
+  	<!--  配置 SpringData,需要加入  jpa 的命名空间 -->
+    <jpa:repositories base-package="com.purefun.fstp.ace.rds.repo"  entity-manager-factory-ref="entityManagerFactory"/>
+  	
+  	<!--  配置RDS相关  --> 	
+  	<bean id="RDSConfig" class="com.purefun.fstp.ace.rds.RDSConfig">
+  		<property name="tableName" value="RDS_STOCK"/>
+  		<property name="rdsCrud"   value="com.purefun.fstp.ace.rds.repo.RDSStockBORepository"/>
+  		<property name="sourceQns" value="fstp.ace.rds.source.stock"/><!-- 订阅的从loader发来BO  topic -->
+  		<property name="source2rdsMap">
+        	<map>
+        		<description>key->rdsBO,value->sourceBO</description>
+       			<entry key="product_id"    		value="secu_id"/>
+       			<entry key="secu_name_cn"   	value="secu_chinese_name"/>
+       			<entry key="secu_name_en"   	value="secu_english_name"/> 
+       			<entry key="exch_type"   		value="exch_type"/>
+       			<entry key="secu_type"   		value="secu_type"/>
+       			<entry key="secu_sub_type"   	value="secu_sub_type"/>
+       			<entry key="currency"   		value="currency"/>
+       			<entry key="list_date"   		value="list_date"/>
+       			<entry key="buy_unit"   		value="buy_unit"/>
+       			<entry key="sell_unit"   		value="sell_unit"/>
+       			<entry key="trade_low_limit"   	value="trade_low_limit"/>
+       			<entry key="trade_high_limit"  	value="trade_high_limit"/>
+       			<entry key="pre_close_price"   	value="pre_close_price"/>
+       			<entry key="tick_price"   		value="tick_price"/>
+       			<entry key="price_high_limit"   value="price_high_limit"/>
+       			<entry key="price_low_limit"   	value="price_low_limit"/> 
+       			<entry key="ex_right_ratio"   	value="ex_right_ratio"/> 
+       			<entry key="dividend_price"   	value="dividend_price"/> 
+       			<entry key="financing_flag"   	value="financing_flag"/> 
+       			<entry key="margin_flag"   		value="margin_flag"/> 
+       			<entry key="secu_status"   		value="secu_status"/> 
+       			<entry key="memo"   			value="memo"/> 			
+       		</map>
+       	</property>
+  	</bean>
+  	<aop:aspectj-autoproxy />
+</beans>  

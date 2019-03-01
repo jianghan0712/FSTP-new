@@ -1,0 +1,47 @@
+[2019-03-01 17:53:50.167029]-[ERROR]-[PyPLogger.py]  config module 
+[2019-03-01 17:53:50.169029]-[INFO]-[PyPLogger.py]  load config db .
+[2019-03-01 17:53:50.169029]-[INFO]-[PyPLogger.py]  initService
+[2019-03-01 17:55:56.623029]-[INFO]-[PyPLogger.py]  load config db .
+[2019-03-01 17:55:56.623029]-[INFO]-[PyPLogger.py]  initService
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  name : Hans
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  author : FSTP
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  bartype : dayBar
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  timebegin : 20180101
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  timeend : lastday
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  industry : all
+[2019-03-01 17:55:56.624029]-[INFO]-[PyPLogger.py]  stockcode : 
+[2019-03-01 17:55:56.625029]-[INFO]-[PyPLogger.py]  startService
+[2019-03-01 17:58:49.469029]-[INFO]-[PyPLogger.py]  load config db .
+[2019-03-01 17:58:49.482029]-[INFO]-[PyPLogger.py]  initService
+[2019-03-01 17:58:49.482029]-[INFO]-[PyPLogger.py]  load strategy configs:
+[2019-03-01 17:58:49.482029]-[INFO]-[PyPLogger.py]      name : Hans
+[2019-03-01 17:58:49.482029]-[INFO]-[PyPLogger.py]      author : FSTP
+[2019-03-01 17:58:49.483029]-[INFO]-[PyPLogger.py]      bartype : dayBar
+[2019-03-01 17:58:49.483029]-[INFO]-[PyPLogger.py]      timebegin : 20180101
+[2019-03-01 17:58:49.483029]-[INFO]-[PyPLogger.py]      timeend : lastday
+[2019-03-01 17:58:49.483029]-[INFO]-[PyPLogger.py]      industry : all
+[2019-03-01 17:58:49.483029]-[INFO]-[PyPLogger.py]      stockcode : 
+[2019-03-01 17:58:49.483029]-[INFO]-[PyPLogger.py]  startService
+[2019-03-01 18:05:23.313029]-[INFO]-[PyPLogger.py]  load config db .
+[2019-03-01 18:05:23.324029]-[INFO]-[PyPLogger.py]  init Service StrategyService successful
+[2019-03-01 18:05:23.324029]-[INFO]-[PyPLogger.py]  load strategy configs:
+[2019-03-01 18:05:23.324029]-[INFO]-[PyPLogger.py]      name : Hans
+[2019-03-01 18:05:23.324029]-[INFO]-[PyPLogger.py]      author : FSTP
+[2019-03-01 18:05:23.325029]-[INFO]-[PyPLogger.py]      bartype : dayBar
+[2019-03-01 18:05:23.325029]-[INFO]-[PyPLogger.py]      timebegin : 20180101
+[2019-03-01 18:05:23.325029]-[INFO]-[PyPLogger.py]      timeend : lastday
+[2019-03-01 18:05:23.325029]-[INFO]-[PyPLogger.py]      industry : all
+[2019-03-01 18:05:23.325029]-[INFO]-[PyPLogger.py]      stockcode : 
+[2019-03-01 18:05:23.325029]-[INFO]-[PyPLogger.py]  start Service StrategyService successful
+[2019-03-01 18:06:05.440029]-[INFO]-[PyPLogger.py]  load config ../../config/StrategyService/DEV/1/config.conf .
+[2019-03-01 18:06:05.453029]-[INFO]-[PyPLogger.py]  load config db .
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]  init Service StrategyService successful
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]  load strategy configs:
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]      name : Hans
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]      author : FSTP
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]      bartype : dayBar
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]      timebegin : 20180101
+[2019-03-01 18:06:05.454029]-[INFO]-[PyPLogger.py]      timeend : lastday
+[2019-03-01 18:06:05.455029]-[INFO]-[PyPLogger.py]      industry : all
+[2019-03-01 18:06:05.455029]-[INFO]-[PyPLogger.py]      stockcode : 
+[2019-03-01 18:06:05.455029]-[INFO]-[PyPLogger.py]  start Service StrategyService successful

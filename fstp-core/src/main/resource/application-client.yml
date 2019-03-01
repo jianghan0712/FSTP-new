@@ -1,0 +1,30 @@
+logging:
+    file= src/main/resource/log4j2.xml 
+server:
+    port: ${random.int[10000,19999]}
+
+eureka:
+    instance:
+        hostname: localhost
+        lease-renewal-interval-in-seconds: 10
+        lease-expiration-duration-in-seconds: 20
+    client:
+        registerWithEureka: true
+        fetch-registry: false
+        service-url:
+            defaultZone: http://${eureka.instance.hostname}:8888/eureka/
+
+spring:
+    application:
+        name: ${ServiceName}_${Env}_${Instance} 
+    kafka:
+        bootstrap-servers: localhost:9092
+        producer:
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+        consumer:
+            group-id: test
+            enable-auto-commit: true
+            auto-commit-interval: 1000
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer  

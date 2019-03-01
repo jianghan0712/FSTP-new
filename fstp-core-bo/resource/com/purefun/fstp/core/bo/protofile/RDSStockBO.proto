@@ -1,0 +1,33 @@
+import "google/protobuf/any.proto";
+
+option java_outer_classname = "RDSStockBO_PRO";
+option java_package = "com.purefun.fstp.core.bo.pro";
+
+message RDSStockBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string product_id = 4;
+    optional string secu_name_cn = 5;
+    optional string secu_name_en = 6;
+    optional string exch_type = 7;
+    optional string secu_type = 8;
+    optional string secu_sub_type = 9;
+    optional string currency = 10;
+    optional string list_date = 11;
+    optional int32 buy_unit = 12;
+    optional int32 sell_unit = 13;
+    optional int32 trade_low_limit = 14;
+    optional int32 trade_high_limit = 15;
+    optional double pre_close_price = 16;
+    optional double tick_price = 17;
+    optional double price_high_limit = 18;
+    optional double price_low_limit = 19;
+    optional double ex_right_ratio = 20;
+    optional double dividend_price = 21;
+    optional string financing_flag = 22;
+    optional string margin_flag = 23;
+    optional string secu_status = 24;
+    optional string memo = 25;
+    optional string update_time = 26;
+}

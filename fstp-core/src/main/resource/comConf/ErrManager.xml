@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	   <bean id="errorManager" class="com.purefun.fstp.core.tool.ErrorManager">
+	       <property name="errorMap">
+               <map>
+       			   <entry key="00000000"    		value="成功"/>
+       			   <!-- Monitor -->
+       			   <entry key="00000001"   		value="pilot.core.rpc.testtwo"/>
+       			   <entry key="00000002"   		value="pilot.core.xxx.testtwo"/>    			
+       		   </map>
+           </property>
+	   </bean>
+   
+</beans>
