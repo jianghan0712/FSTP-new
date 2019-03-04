@@ -16,7 +16,7 @@ class StrategyContainer(object):
         'stockcode': [],
         'dbtype' : 'mongodb',
         'dbhost' : 'local',
-        'dbport' : 
+        'dbport' : ''
     }
     
     
