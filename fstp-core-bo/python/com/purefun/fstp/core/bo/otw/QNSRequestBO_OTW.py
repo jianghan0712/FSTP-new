@@ -1,6 +1,6 @@
-from core.common.ICommon_OTW import ICommon_OTW
-from com.purefun.fstp.core.bo.pro import QNSRequestBO_pb2
-from com.purefun.fstp.core.bo.model.QNSRequestBO import QNSRequestBO
+from src.core.common.ICommon_OTW import ICommon_OTW
+from src.com.purefun.fstp.core.bo.pro import QNSRequestBO_pb2
+from src.com.purefun.fstp.core.bo.model.QNSRequestBO import QNSRequestBO
 
 class QNSRequestBO_OTW(ICommon_OTW):
 

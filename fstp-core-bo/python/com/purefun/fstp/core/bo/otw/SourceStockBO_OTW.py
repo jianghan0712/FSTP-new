@@ -1,6 +1,6 @@
-from core.common.ICommon_OTW import ICommon_OTW
-from com.purefun.fstp.core.bo.pro import SourceStockBO_pb2
-from com.purefun.fstp.core.bo.model.SourceStockBO import SourceStockBO
+from src.core.common.ICommon_OTW import ICommon_OTW
+from src.com.purefun.fstp.core.bo.pro import SourceStockBO_pb2
+from src.com.purefun.fstp.core.bo.model.SourceStockBO import SourceStockBO
 
 class SourceStockBO_OTW(ICommon_OTW):
 

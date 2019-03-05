@@ -1,6 +1,6 @@
-from core.common.ICommon_OTW import ICommon_OTW
-from com.purefun.fstp.core.bo.pro import TestBO_pb2
-from com.purefun.fstp.core.bo.model.TestBO import TestBO
+from src.core.common.ICommon_OTW import ICommon_OTW
+from src.com.purefun.fstp.core.bo.pro import TestBO_pb2
+from src.com.purefun.fstp.core.bo.model.TestBO import TestBO
 
 class TestBO_OTW(ICommon_OTW):
 

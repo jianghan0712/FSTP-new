@@ -1,6 +1,6 @@
-from core.common.ICommon_OTW import ICommon_OTW
-from com.purefun.fstp.example.bo.pro import ExampleQnsBO_pb2
-from com.purefun.fstp.example.bo.model.ExampleQnsBO import ExampleQnsBO
+from src.core.common.ICommon_OTW import ICommon_OTW
+from src.com.purefun.fstp.example.bo.pro import ExampleQnsBO_pb2
+from src.com.purefun.fstp.example.bo.model.ExampleQnsBO import ExampleQnsBO
 
 class ExampleQnsBO_OTW(ICommon_OTW):
 

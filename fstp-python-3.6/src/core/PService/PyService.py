@@ -37,7 +37,7 @@ class PyService(object):
             subConf.read(fileName)
         
         if subConf is None:
-            self.log.error("load config ",fileName," failed")
+            self.log.error("load config {}",fileName," failed")
         else:
             self.confDic[moduName] = subConf
             self.log.info('load config {} .',moduName)   
@@ -53,7 +53,7 @@ class PyService(object):
         """
         ret = None
         if self.confDic.get(module) is None:
-            self.log.error("config module ", module, " is not exist!") 
+            self.log.error("config module {}", module, " is not exist!") 
             return None
  
         if  section is None:
@@ -67,9 +67,9 @@ class PyService(object):
             if self.confDic.get(module).has_option(section, option):
                 ret = self.confDic.get(module).get(section, option)
             else:
-                self.log.error("get config module=", module, " ,section=", section, " ,option", option, " failed") 
+                self.log.error("get config module={} ,section={}, option={}  failed", module, section, option) 
         else:
-            self.log.error("get config module=", module, " ,section=", section, " ,option=", option, " failed")
+            self.log.error("get config module={} ,section={}, option={}  failed", module, section, option) 
         
         return ret
     

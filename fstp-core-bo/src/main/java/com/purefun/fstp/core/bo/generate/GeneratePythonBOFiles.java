@@ -175,9 +175,9 @@ public class GeneratePythonBOFiles {
 		Class bo = Class.forName(boClassName);
 		Field[] fields=bo.getFields();
 		
-		println(new StringBuilder("from core.common.ICommon_OTW import ICommon_OTW").toString());
-		println(new StringBuilder("from ").append(bopackageName).append(".pro import ").append(_pb2Name).toString());
-		println(new StringBuilder("from ").append(bopackageName).append(".model.").append(boName).append(" import ").append(boName).toString());
+		println(new StringBuilder("from src.core.common.ICommon_OTW import ICommon_OTW").toString());
+		println(new StringBuilder("from ").append("src.").append(bopackageName).append(".pro import ").append(_pb2Name).toString());
+		println(new StringBuilder("from ").append("src.").append(bopackageName).append(".model.").append(boName).append(" import ").append(boName).toString());
 		println("");
 		
 		println(new StringBuilder("class ").append(_otwName).append("(ICommon_OTW):").toString());

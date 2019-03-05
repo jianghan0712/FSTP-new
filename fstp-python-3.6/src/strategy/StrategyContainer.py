@@ -1,27 +1,27 @@
-#coding=utf-8
+#encoding=utf-8
 import copy
 
-from src.core.log.PyPLogger import PyPLogger
-import pymongo as mgdb
-
 class StrategyContainer(object):
-
+    DATATYPE_RELATION={
+        'dayBar':'fstp_stock_bar_'
+    }
+    
     DEFAULT_CONFIG = {
         'name' : 'anonymous',
         'author' : 'FSTP',
         'bartype' : 'dayBar',
         'timebegin' : '20180101',
         'timeend' : 'lastday',
-        'industry' : ['all'],
+        'industry' : [],
         'stockcode': [],
         'dbtype' : 'mongodb',
         'dbhost' : 'local',
         'dbport' : ''
     }
-    
-    
-    def __init__(self, log , **configs ):
+      
+    def __init__(self, log, datacontainer, **configs ):
         self.log = log
+        self.data = datacontainer
         extra_configs = set(configs).difference(self.DEFAULT_CONFIG)
         
         if extra_configs:
@@ -29,11 +29,22 @@ class StrategyContainer(object):
         
         self.config = copy.copy(self.DEFAULT_CONFIG)
         self.config.update(configs)
-        
-        
+               
         log.info('load strategy configs:')
-        for (k,v) in self.config.items():
+        self.log.info('--------------------------')
+        for (k,v) in self.config.items():           
             self.log.info('    {} : {}',k,v)
-
-
+        self.log.info('--------------------------')
+    
+    def start(self):
+        stock_pool = []
+        if self.config['industry'] == 'all':
+            pass
+        elif self.config['industry'] == '' and self.config['stockcode'] != '':
+            stock_pool = self.config['stockcode'].split(',')
+        
+        print(stock_pool)
+            
+            
+        
             

@@ -24,10 +24,13 @@ class PyPLogger(object):
         
 
     def log_type(self, record, handler):
-        log = "[{date}]-[{level}]-[{filename}]  {msg}".format(
+#         log = "[{date}]-[{level}]-[" + self.serverName + "] - {msg}".format(
+        log = "["+self.serverName + "]" +"-[{date}]-[{level}] - {msg}".format(
             date = record.time,                              
-            level = record.level_name,                       
-            filename = os.path.split(record.filename)[-1],   
+            level = record.level_name,                    
+#             filename = os.path.split(record.filename)[-1],  
+#             func_name = record.func_name,
+#             lineno = record.lineno,
             msg = record.message                             
         )
         return log

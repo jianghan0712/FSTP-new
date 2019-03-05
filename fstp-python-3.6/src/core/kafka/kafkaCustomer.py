@@ -2,10 +2,10 @@
 import json
 from kafka import KafkaConsumer
 
-from com.purefun.fstp.core.bo.otw.TestBO_OTW import TestBO_OTW
+from src.com.purefun.fstp.core.bo.otw.TestBO_OTW import TestBO_OTW
 
 def consumer():
-    com = KafkaConsumer('fstp.core.rpc.*', bootstrap_servers=['localhost:9092'])
+    com = KafkaConsumer('fstp.core.rpc.testone', bootstrap_servers=['localhost:9092'])
     for msg in com:
 #         value=json.loads(msg.value)
         bo_otw = TestBO_OTW(msg.value)

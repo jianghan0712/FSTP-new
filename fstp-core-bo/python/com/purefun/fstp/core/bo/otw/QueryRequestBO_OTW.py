@@ -1,6 +1,6 @@
-from core.common.ICommon_OTW import ICommon_OTW
-from com.purefun.fstp.core.bo.pro import QueryRequestBO_pb2
-from com.purefun.fstp.core.bo.model.QueryRequestBO import QueryRequestBO
+from src.core.common.ICommon_OTW import ICommon_OTW
+from src.com.purefun.fstp.core.bo.pro import QueryRequestBO_pb2
+from src.com.purefun.fstp.core.bo.model.QueryRequestBO import QueryRequestBO
 
 class QueryRequestBO_OTW(ICommon_OTW):
 
