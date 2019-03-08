@@ -1,0 +1,10 @@
+syntax = "proto2";
+package com.purefun.fstp.core.bo;
+
+message TestBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string servername = 4;
+    optional string msg = 5;
+}

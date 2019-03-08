@@ -1,0 +1,14 @@
+syntax = "proto2";
+package com.purefun.fstp.core.bo;
+
+message CommandBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string targetService = 4;
+    optional string parm0 = 5;
+    optional string parm1 = 6;
+    optional string parm2 = 7;
+    optional string parm3 = 8;
+    optional string parm4 = 9;
+}

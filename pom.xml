@@ -325,5 +325,6 @@
     <module>fstp-core-service</module>
     <module>fstp-web</module>
     <module>fstp-ace-rds</module>
+    <module>fstp-ace-md</module>
   </modules>
 </project>

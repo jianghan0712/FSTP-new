@@ -1,10 +1,14 @@
 eclipse.preferences.version=1
+encoding//config/BacktestService/DEV/1/config.conf=UTF-8
 encoding//src/core/PService/PyService.py=utf-8
-encoding//src/core/datacontainer/MdContainer.py=utf-8
 encoding//src/core/kafka/kafkaCustomer.py=utf-8
 encoding//src/core/kafka/kafkaProducer.py=utf-8
 encoding//src/core/log/PyPLogger.py=utf-8
 encoding//src/core/log/PyPLogger2.py=utf-8
 encoding//src/core/md/MdData.py=UTF-8
-encoding//src/service/StrategyService.py=utf-8
-encoding//src/strategy/StrategyContainer.py=utf-8
+encoding//src/service/BacktestService.py=utf-8
+encoding//src/service/datacontainer/MdContainer.py=utf-8
+encoding//src/service/engine/EventEnginer.py=UTF-8
+encoding//src/service/strategy/DoubleMA.py=utf-8
+encoding//src/service/strategy/StrategyContainer.py=utf-8
+encoding/<project>=UTF-8

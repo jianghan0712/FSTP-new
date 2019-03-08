@@ -1,3 +1,7 @@
-[INFO] [2019-02-18 13:51:53.940][PyTestService] - create qpid session succesful
-[INFO] [2019-02-18 13:51:53.970][PyTestService] - initService successful
-[INFO] [2019-02-18 13:51:53.971][PyTestService] - startService successful
+[INFO] [2019-03-06 11:44:39.920][PyTestService] - initService successful
+[INFO] [2019-03-06 11:44:39.944][PyTestService] - startService successful
+[INFO] [2019-03-06 11:47:29.827][PyTestService] - initService successful
+[INFO] [2019-03-06 11:47:29.829][PyTestService] - startService successful
+[INFO] [2019-03-06 15:28:42.701][PyTestService] - create qpid session succesful
+[INFO] [2019-03-06 15:28:42.763][PyTestService] - initService successful
+[INFO] [2019-03-06 15:28:42.765][PyTestService] - startService successful

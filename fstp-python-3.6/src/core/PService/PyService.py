@@ -17,7 +17,7 @@ class PyService(object):
         """
         path = "../../config/" + self.serviceName + "/" + self.property.env + "/" + self.property.instance + "/"
         mainCof = configparser.SafeConfigParser()
-        mainCof.read(path + "config.conf")
+        mainCof.read(path + "config.conf", encoding='utf-8')
         self.log.info('load config {} .', path + "config.conf")
         
         self.confDic['main'] = mainCof

@@ -3,7 +3,7 @@
 import os
 import logbook
 from logbook import Logger,TimedRotatingFileHandler
-from logbook.more import ColorizedStderrHandler
+from logbook.more import ColorizedStderrHandler,StderrHandler
 
 log_dir = os.path.join("../../logging/")
            
@@ -17,6 +17,7 @@ class PyPLogger(object):
         self.log_file = TimedRotatingFileHandler(
             os.path.join(log_dir, '%s.log' % self.serverName),date_format='%Y-%m-%d', bubble=True, encoding='utf-8')
         self.log_std = ColorizedStderrHandler(bubble=True)
+#         self.log_std = StderrHandler(bubble=True)
         
         self.log = Logger(self.serverName)
         self.__init_logger()
@@ -48,8 +49,8 @@ class PyPLogger(object):
     def info(self, *args, **kwargs):
         self.log.info(*args, **kwargs)
     
-    def warm(self, *args, **kwargs):
-        self.log.warm(*args, **kwargs)
+    def warn(self, *args, **kwargs):
+        self.log.warn(*args, **kwargs)
     
     def error(self, *args, **kwargs):
         self.log.error(*args, **kwargs)

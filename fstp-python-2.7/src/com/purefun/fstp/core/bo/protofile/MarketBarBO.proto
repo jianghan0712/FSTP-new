@@ -1,0 +1,17 @@
+syntax = "proto2";
+package com.purefun.fstp.core.bo;
+
+message MarketBarBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string product_id = 4;
+    optional string exch = 5;
+    optional string date = 6;
+    optional double high = 7;
+    optional double low = 8;
+    optional double open = 9;
+    optional double close = 10;
+    optional double change = 11;
+    optional double volume = 12;
+}

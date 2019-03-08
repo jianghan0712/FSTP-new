@@ -1,0 +1,11 @@
+syntax = "proto2";
+package com.purefun.fstp.example.bo;
+
+message ExampleQnsBO {
+    optional string uuid = 1;
+    optional sint64 boid = 2;
+    optional string destination = 3;
+    optional string company = 4;
+    optional string name = 5;
+    optional int32 age = 6;
+}

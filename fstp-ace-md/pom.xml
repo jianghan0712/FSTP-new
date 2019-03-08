@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.purefun</groupId>
+    <artifactId>fstp</artifactId>
+    <version>0.1.2-SNAPSHOT</version>
+  </parent>
+  <groupId>com.purefun</groupId>
+  <artifactId>fstp-ace-md</artifactId>
+  <version>0.1.2-SNAPSHOT</version>
+  <name>fstp-ace-md</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>  
+    <dependency>  
+        <groupId>org.mongodb</groupId>  
+        <artifactId>mongodb-driver</artifactId>  
+        <version>3.2.2</version>  
+    </dependency> 
+    <dependency>
+       	<groupId>com.purefun</groupId>
+       	<artifactId>fstp-core-service</artifactId>
+       	<version>${fstp.version}</version>
+	</dependency>  
+</dependencies>
+</project>

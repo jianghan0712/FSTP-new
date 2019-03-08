@@ -1,10 +1,12 @@
 package com.purefun.fstp.core.service.testservice;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.purefun.fstp.core.bo.CommandBO;
 import com.purefun.fstp.core.bo.TestBO;
 import com.purefun.fstp.core.bo.TestBO2;
 import com.purefun.fstp.core.bo.commom.ICommom_OTW;
 import com.purefun.fstp.core.bo.otw.BaseBO_OTW;
+import com.purefun.fstp.core.bo.otw.CommandBO_OTW;
 import com.purefun.fstp.core.bo.otw.RDSStockBO_OTW;
 import com.purefun.fstp.core.bo.otw.TestBO2_OTW;
 import com.purefun.fstp.core.bo.otw.TestBO_OTW;
@@ -32,13 +34,17 @@ public class TestService extends PClient{
 //		Subscriber a = this.rpcfactory.createSubscriber();
 //		a.QNS(listener);
 //		a.subscribe("fstp.core.rpc.*", new ExampleSubListener(log));
-//		Publisher a = this.ipcfactory.createPublisher();
+		Publisher a = this.ipcfactory.createPublisherJMS();
+		CommandBO_OTW bo = (CommandBO_OTW)BoFactory.createBo(CommandBO.class);
+		bo.setParm0("fstp_stock_bar_中成药");
+		bo.setParm1("000423");
+		a.publish(bo, PublishMode.PUBLISH_ONLY);
 //		a.publish((TestBO_OTW)BoFactory.createBo(TestBO.class), PublishMode.PUBLISH_AND_DUR);
 //		a.publish((TestBO2_OTW)BoFactory.createBo(TestBO2.class), PublishMode.PUBLISH_AND_DUR);
 //		QNSubscriber B = this.ipcfactory.createQNSubscriber();
 //		B.QNSubscribe("fstp.core.rpc.*", new ExampleQNSListener(new ExampleQueryListener(),new ExampleSubListener()));
-		Query q = new Query(session);
-		q.query("fstp.ace.rds.server.stock", new ExampleQueryListener());
+//		Query q = new Query(session);
+//		q.query("fstp.ace.rds.server.stock", new ExampleQueryListener());
 	}
 	
 	public class ExampleSubListener extends SubMessageListener{

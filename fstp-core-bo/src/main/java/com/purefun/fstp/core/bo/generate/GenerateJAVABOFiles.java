@@ -159,8 +159,8 @@ public class GenerateJAVABOFiles {
 	}
 	
 	private void genBuildFile(String fileName) {
-		String strCmd = "./resource/protoc.exe -I=./" + protofileDirectory + " --java_out=./resource/ ./" + protofileDirectory + fileName;  		
-//		String strCmd = "D:/software/protobuf-3.5.1/src/protoc.exe -I=./" + protofileDirectory + " --java_out=./resource/ ./" + protofileDirectory + fileName;  
+//		String strCmd = "./resource/protoc.exe -I=./" + protofileDirectory + " --java_out=./resource/ ./" + protofileDirectory + fileName;  		
+		String strCmd = "D:/software/protobuf-3.5.1/src/protoc.exe -I=./" + protofileDirectory + " --java_out=./resource/ ./" + protofileDirectory + fileName;  
 		try {
 		    Runtime.getRuntime().exec(strCmd);
 		} catch (IOException e) {
